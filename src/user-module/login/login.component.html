@@ -1,0 +1,35 @@
+<div class="mat-card-cvr">
+    <mat-card class="example-card">
+        <mat-card-header>
+        <mat-card-title>Login</mat-card-title>
+        </mat-card-header>
+        <mat-card-content>
+        <form class="example-form">
+            <table class="example-full-width" cellspacing="0">
+                <tr>
+                    <td>
+                    <mat-form-field class="example-full-width">
+                        <md-input-container>
+                            <input [(ngModel)]="username" type="text" name="username" matInput placeholder="Username" required>
+                            <!-- <mat-error *ngIf="username.touched && username.dirty && username.errors?.['required']">The Username is required </mat-error> -->
+                        </md-input-container>
+                    </mat-form-field>
+                    </td>
+                </tr>
+                <tr>
+                <td><mat-form-field class="example-full-width">
+                    <input matInput placeholder="Password" [(ngModel)]="password" type="password" name="password" required>
+                </mat-form-field></td>
+                </tr>
+                <tr>
+                    <span>Don't Have an account <a href="signup"> Click Here </a> </span>
+                </tr>
+            </table>
+        </form>
+        </mat-card-content>
+        <mat-card-actions>
+        <button mat-raised-button (click)="onSubmit()" color="primary">Login</button>
+        </mat-card-actions>
+    </mat-card>
+</div>
+ 

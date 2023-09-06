@@ -1,0 +1,55 @@
+.carousel-item {
+    height: 420px;
+}
+
+.carousel-inner {
+    margin-bottom: 3px !important;
+    padding-bottom: 0px !important;
+}
+
+.image {
+    height: 90%;
+}
+
+img {
+    width: 20rem;
+    height: 20rem;
+    text-align: center;
+    display: flex;
+}
+
+.hr-lines{
+    position: relative;
+    /*  new lines  */
+    max-width: 500px;
+    margin: 5px auto;
+    
+    text-align: center;
+}
+
+.hr-lines:before{
+    content:" ";
+    display: block;
+    height: 2px;
+    width: 130px;
+    position: absolute;
+    top: 50%;
+    left: 0;
+    background: black;
+}
+
+.hr-lines:after{
+    content:" ";
+    height: 2px;
+    width: 130px;
+    background: black;
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+}  
+
+.card-deck {
+    height: fit-content;
+}
+

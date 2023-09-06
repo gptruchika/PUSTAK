@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+      <div class="col-lg-3 col-md-4 col-sm-6" *ngFor="let book of bookList">
+        <div class="product-card" (click)="showDetails(book)">
+          <div class="product-img text-center">
+            <img [src]="['../../assets/Images/'+book.image]" alt="Product Image">
+          </div>
+          <div class="product-details text-center">
+            <h5 class="product-title">{{ book.bookName }}</h5>
+            <p class="product-price">&#8377;{{ book.price }}</p>
+            <a href="#" class="btn btn-primary ml-2 mr-2">Buy Now</a>
+            <a href="#" class="btn btn-primary ml-2 mr-2">Add to Cart</a>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>

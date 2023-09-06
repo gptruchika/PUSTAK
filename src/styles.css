@@ -1,0 +1,14 @@
+/* You can add global styles to this file, and also import other style files */
+.styleform {
+    text-align: center;
+    background-color: #6baed6;
+    margin-bottom: 0% !important;
+    padding-bottom: 0% !important;
+}
+
+.content {
+    margin-top: 13%;
+    z-index:1;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

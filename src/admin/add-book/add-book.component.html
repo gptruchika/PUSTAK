@@ -1,0 +1,64 @@
+<div class="mat-card-cvr">
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+            <div class="form-group">
+            <!-- <mat-form-field appearance="fill"> -->
+            <label>Book Name</label>
+            <input formControlName="bookName" required>
+            <!-- </mat-form-field>
+            <error *ngIf="signupForm.get('bookName')?.invalid && signupForm.get('bookName')?.touched">Book Name is required</mat-error> -->
+            </div>
+            
+            <div class="form-group">
+            <label>Author</label>
+            <input formControlName="author" required >
+            <mat-error *ngIf="signupForm.get('author')?.touched && signupForm.get('author')?.invalid">author is required</mat-error>
+            </div>
+
+            <div class="form-group">
+                <!-- <mat-form-field appearance="fill"> -->
+                <label>Category</label>
+                <select formControlName="category" required>
+                <option value="Programming">Programming</option>
+                <option value="Biographies">Biographies</option>
+                <option value="Business">Business</option>
+                </select>
+                <!-- </mat-form-field> -->
+                <mat-error *ngIf="signupForm.get('category')?.invalid && signupForm.get('category')?.touched">Category is required</mat-error>
+            </div>
+    
+            <div class="form-group">
+                <mat-form-field appearance="fill">
+                <mat-label>Price</mat-label>
+                <input matInput formControlName="price" required>
+                </mat-form-field>
+                <mat-error *ngIf="signupForm.get('price')?.touched && signupForm.get('price')?.invalid">price is required</mat-error>
+                </div>
+            
+            <div class="form-group">
+            <mat-form-field appearance="fill">
+            <mat-label>Rating</mat-label>
+            <input matInput formControlName="rating" required>
+            </mat-form-field>
+            <mat-error *ngIf="signupForm.get('rating')?.invalid && signupForm.get('rating')?.touched">rating is required</mat-error>
+            </div>
+            
+            
+            <div class="form-group">
+            <mat-form-field appearance="fill">
+            <mat-label>Description</mat-label>
+            <input matInput formControlName="description" required>
+            </mat-form-field>
+            <mat-error *ngIf="signupForm.get('description')?.invalid && signupForm.get('description')?.touched">description is required</mat-error>
+            </div>
+            
+            <div class="form-group">
+            <mat-form-field appearance="fill">
+            <mat-label>Image</mat-label>
+            <input type="file" matInput formControlName="image" required>
+            </mat-form-field>
+            <mat-error *ngIf="signupForm.get('image')?.invalid && signupForm.get('image')?.touched">image is required</mat-error>
+            </div>
+            
+            <button type="submit" mat-raised-button [disabled]="signupForm.invalid">Sign Up</button>
+    </form>
+</div>

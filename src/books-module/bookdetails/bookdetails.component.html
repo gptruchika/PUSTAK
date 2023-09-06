@@ -1,0 +1,25 @@
+<div class="book-details-container" *ngIf="bookdetail" >
+    <div class="book-image-container">
+        <img [src]="['../../assets/Images/'+ bookdetail.image]">
+    </div>
+    <div class="bookDetails">
+        <mat-card>
+            <mat-card-header>
+                <mat-card-title> {{bookdetail.bookName}} </mat-card-title>
+            </mat-card-header>
+                <mat-card-content>
+                    <p><strong>Author</strong>       &nbsp;          {{bookdetail.author}}</p>
+                    <p><strong>Price</strong>         &nbsp;       &#8377;   {{bookdetail.price}}</p>
+                    <p><strong>Description</strong>   &nbsp;          The book covers all the essential topics of Angular and test-driven development, making it ideal for beginners and advanced developers. Offers a practical guide to using test-driven development with Angular. Covers topics like Jasmine, Karma, Protractor, and testing Angular components, services, and directives.</p>
+                </mat-card-content>
+            <div class="star-rating">
+                <app-star-rating [rating]="bookdetail.rating"></app-star-rating>
+            </div>
+            <div class="button-container">
+                <button mat-raised-button color="primary" [routerLink]="['/booklist',bookdetail.category]">Back</button>
+                <button mat-raised-button color="accent" >Buy Now</button>
+                <button mat-raised-button color="accent">Add To Cart</button>
+            </div>
+        </mat-card>
+    </div>
+</div>
